@@ -1,0 +1,16 @@
+.modal {
+    text-align: center;
+    width: 590px;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    & h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    & p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}

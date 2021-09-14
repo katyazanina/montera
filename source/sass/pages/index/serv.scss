@@ -1,0 +1,173 @@
+.serv {
+    background: $color-dark;
+    color: $color-white;
+    &__wrap {
+        @include list-destroy;
+    }
+    &__item {
+        box-sizing: border-box;
+        padding: 50px 3% 40px 3%;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+        @include tablets {
+            padding: 35px 5% 75px 5%;
+        }
+        @include mobile {
+            padding: 50px 25px 75px 25px;
+        }
+        & .color1 {
+            transition: $transition-speed;
+        }
+        & .color2 {
+            transition: $transition-speed;
+        }
+        & .color11 {
+            transition: $transition-speed;
+        }
+        & .color22 {
+            transition: $transition-speed;
+        }
+        &:hover {
+            & #serv__bg1 {
+                & .color1 {
+                    stop-color: #007655;
+                }
+                & .color2 {
+                    stop-color: #83C041;
+                }
+                & .color11 {
+                    stop-color: #0A3155;
+                }
+                & .color22 {
+                    stop-color: #83C041;
+                }
+            }
+            & #serv__bg2 {
+                & .color1 {
+                    stop-color: #0049B4;
+                }
+                & .color2 {
+                    stop-color: #369DFC;
+                }
+                & .color11 {
+                    stop-color: #061850;
+                }
+                & .color22 {
+                    stop-color: #369DFC;
+                }
+            }
+            & #serv__bg3 {
+                & .color1 {
+                    stop-color: #8B004B;
+                }
+                & .color2 {
+                    stop-color: #C0418D;
+                }
+                & .color11 {
+                    stop-color: #550A3B;
+                }
+                & .color22 {
+                    stop-color: #C0418D;
+                }
+            }
+            & #serv__bg4 {
+                & .color1 {
+                    stop-color: #AA1C2C;
+                }
+                & .color2 {
+                    stop-color: #CE5404;
+                }
+                & .color11 {
+                    stop-color: #3D0438;
+                }
+                & .color22 {
+                    stop-color: #DB8709;
+                }
+            }
+        }
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        // bottom: 0;
+        // width: 100%;
+        // height: 100%;
+        object-fit: cover;
+        right: 0;
+        z-index: -1;
+    }
+    &__title {
+        font-weight: 300;
+        font-size: 34px;
+        line-height: 36px;
+        margin-bottom: 40px;
+        @include tablets {
+            font-size: 30px;
+            line-height: 34px;
+            margin-bottom: 20px;
+        }
+        @include mobile {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+    &__list {
+        @include list-destroy;
+        font-size: 22px;
+        line-height: 24px;
+        @include tablets {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        & li {
+            margin-bottom: 15px;
+            @include tablets {
+                margin-bottom: 10px;
+            }
+        }
+        & li a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        & li a::after {
+            content: "";
+            width: 30px;
+            height: 7px;
+            display: block;
+            position: relative;
+            margin-left: 10px;
+            background-image: $arrow-white;
+            transition: $transition-speed;
+            // opacity: 0;
+        }
+        & li:hover a {
+            color: #ffffff;
+        }
+        & li:hover a::after {
+            // background-image: $arrow;
+            // opacity: 1;
+            transform: translateX(10px);
+        }
+        padding-bottom: 45px;
+        @include tablets {
+            padding-bottom: 22px;
+        }
+    }
+    & .button {
+        margin-top: auto;
+    }
+    & .swiper-pagination {
+        display: none;
+        @include tablets {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,860 @@
+<!-- Шапка и меню -->
+<include src="components/header.html" locals='{
+    "class": "header--inner"}'></include>
+
+<main>
+
+    <div class=" wrapper inner">
+
+
+        <include src="components/breadcrumbs.html"></include>
+
+        <include src="components/h1-block.html" locals='{
+            "title": "Бриф"}'></include>
+
+
+        <section class="brif  block--white block--padding container">
+
+            <form action="">
+                <h4>1. Плодотворное сотрудничество начинается со знакомства. Приятно с вами познакомиться!</h4>
+                <fieldset class="fieldset">
+                    <label class="label">
+                       
+                        <input class="input" type="text" name="" id="" placeholder=" ">
+                        <span>Имя*</span>
+                    </label>
+                    <label class="label">
+                   
+                        <input class="input" type="tel" name="" id="" placeholder=" ">
+                        <span>Телефон</span>
+                    </label>
+                    <label class="label">
+                   
+                        <input class="input" type="email" name="" id="" placeholder=" ">
+                        <span>Еmail*</span>
+                    </label>
+                </fieldset>
+                <h4>2. А теперь расскажите пару слов о Вашем бизнесе для того, чтобы мы лучше узнали вас и вашу компанию</h4>
+                <fieldset class="fieldset fieldset--big">
+
+                    <div class="custom-select">
+                        <select name="" id="">
+                            <option value="">Выберите отрасль</option>
+                            <option value="">IT</option>
+                            <option value="">Наука</option>
+                            <option value="">Производство</option>
+                        </select>
+                    </div>
+
+                </fieldset>
+
+                <p>Пожалуйста, расскажите нам немного о вашей компании. Можно поделиться вашей миссией, целями или упомянуть несколько интересных фактов. Возможно, у вашего бизнеса есть определённая специфика, о которой нам стоит знать</p>
+
+                <fieldset class="fieldset fieldset--big fieldset--big-text">
+
+                    <label class="label-text">
+                     
+                        <textarea class="input-text" name="" id="" placeholder=" "></textarea>
+                        <span>Введите сообщение</span>
+                    </label>
+
+                </fieldset>
+                <p>Коротко опишите продукты, товары или услуги, которые Вы предлагаете своим клиентам. Возможно, Вы продаете что-то малоизвестное или необычное, в чем мы не разбираемся. Пожалуйста, введите нас в курс дела, это сильно поможет в процессе работы
+                    над дизайном.</p>
+                <fieldset class="fieldset fieldset--big fieldset--big-text">
+
+                    <label class="label-text">
+                     
+                        <textarea class="input-text" name="" id="" placeholder=" "></textarea>
+                        <span>Введите сообщение</span>
+                    </label>
+
+                </fieldset>
+                <p>Расскажите немного о ваших клиентах. Нам важно понимать, для какой аудитории создается дизайн.</p>
+
+                <fieldset class="fieldset fieldset--checkbox">
+                    <div>
+                        <p>1) Основные ваши клиенты – это:</p>
+
+                        <label>
+                            <input type="checkbox" value="Частные лица" id="check1">
+                            <label class="checkbox__label" for="check1"></label>
+                        <span>Частные лица</span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="Фирмы (организации)" id="check2">
+                            <label class="checkbox__label" for="check2"></label>
+                        <span>Фирмы (организации)</span>
+                        </label>
+                    </div>
+                    <div>
+                        <p>2) По географическому признаку вы ориентированы на:</p>
+                        <label>
+                            <input type="checkbox" value="Россия" id="check3">
+                            <label class="checkbox__label" for="check3"></label>
+                        <span>Россия</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="РФ и страны СНГ" id="check4">
+                            <label class="checkbox__label" for="check4"></label>
+                        <span>РФ и страны СНГ</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Зарубежные клиенты" id="check5">
+                            <label class="checkbox__label" for="check5"></label>
+                        <span>Зарубежные клиенты</span>
+                        </label>
+                    </div>
+                    <div>
+                        <p>3) Ваш пол:</p>
+                        <label>
+                            <input type="checkbox" value="Мужской" id="check6">
+                            <label class="checkbox__label" for="check6"></label>
+                        <span>Мужской</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Женский" id="check7">
+                            <label class="checkbox__label" for="check7"></label>
+                        <span>Женский</span>
+                        </label>
+
+
+                    </div>
+                    <div>
+                        <p>4) Возраст:</p>
+                        <label>
+                            <input type="checkbox" value="до 18 лет" id="check8">
+                            <label class="checkbox__label" for="check8"></label>
+                        <span>до 18 лет</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="18-25" id="check9" >
+                            <label class="checkbox__label" for="check9"></label>
+                        <span>18-25</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="25-40" id="check10">
+                            <label class="checkbox__label" for="check10"></label>
+                        <span>25-40</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="от 40 и выше" id="check11">
+                            <label class="checkbox__label" for="check11"></label>
+                        <span>от 40 и выше</span>
+                        </label>
+
+                    </div>
+                    <div>
+                        <p>5) Доход:</p>
+                        <label>
+                        <input type="checkbox" value="Ниже среднего" id="check12">
+                        <label class="checkbox__label" for="check12"></label>
+                        <span>Ниже среднего</span>
+                        </label>
+                        <label>
+                        <input type="checkbox" value="Средний" id="check13">
+                        <label class="checkbox__label" for="check13"></label>
+                        <span>Средний</span>
+                        </label>
+                        <label>
+                        <input type="checkbox" value="Выше среднего" id="check14">
+                        <label class="checkbox__label" for="check14"></label>
+                        <span>Выше среднего</span>
+                        </label>
+                        <label>
+                        <input type="checkbox" value="Высокий" id="check15">
+                        <label class="checkbox__label" for="check15"></label>
+                        <span>Высокий</span>
+                        </label>
+
+                    </div>
+                </fieldset>
+                <p>Вы можете добавить пару слов о Вашей целевой аудитории. Здесь Вы можете рассказать об образовании, семейном положении, социальном статусе, профессии, характере, ценностях, жизненной позиции, образе жизни, покупательском поведении и т.
+                    д.
+                </p>
+                <fieldset class="fieldset fieldset--big fieldset--big-text">
+
+                    <label class="label-text">
+                     
+                        <textarea class="input-text" name="" id="" placeholder=" "></textarea>
+                        <span>Введите сообщение</span>
+                    </label>
+
+                </fieldset>
+                <p>Опишите Ваши основные конкурентные преимущества.</p>
+                <fieldset class="fieldset fieldset--big fieldset--big-text">
+
+                    <label class="label-text">
+                     
+                        <textarea class="input-text" name="" id="" placeholder=" "></textarea>
+                        <span>Введите сообщение</span>
+                    </label>
+
+                </fieldset>
+                <p>Укажите Ваших главных конкурентов. Это должны быть 1-2 компании, от которых необходимо отстроиться.</p>
+                <fieldset class="fieldset fieldset--big fieldset--big-text">
+
+                    <label class="label-text">
+                     
+                        <textarea class="input-text" name="" id="" placeholder=" "></textarea>
+                        <span>Введите сообщение</span>
+                    </label>
+
+                </fieldset>
+                <p>Возможно, есть и неочевидные, второстепенные конкуренты, на которых стоит обратить внимание. Какие они?</p>
+                <fieldset class="fieldset fieldset--big fieldset--big-text">
+
+                    <label class="label-text">
+                     
+                        <textarea class="input-text" name="" id="" placeholder=" "></textarea>
+                        <span>Введите сообщение</span>
+                    </label>
+
+                </fieldset>
+
+
+                <h4 style="margin-top: 40px;margin-bottom: 40px;">3. Перейдем непосредственно к дизайну. Для начала формулируем задачи.</h4>
+
+
+                <p>1) Какие элементы дизайна у вас уже есть?</p>
+                <fieldset class="fieldset fieldset--norow">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Логотип" id="check22">
+                            <label class="checkbox__label" for="check22"></label>
+                        <span>Логотип</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                        <input type="checkbox" value="Визитки" id="check21">
+                        <label class="checkbox__label" for="check21"></label>
+                        <span>Визитки</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                        <input type="checkbox" value="Сайт" id="check23">
+                        <label class="checkbox__label" for="check23"></label>
+                        <span>Сайт</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Фирменные цвета" id="check24">
+                            <label class="checkbox__label" for="check24"></label>
+                        <span>Фирменные цвета</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Бланки/конверты/папки/любая другая полиграфическая продукция" id="check25">
+                            <label class="checkbox__label" for="check25"></label>
+                        <span>Бланки/конверты/папки/любая другая полиграфическая продукция</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Другое" id="check26">
+                            <label class="checkbox__label" for="check26"></label>
+                        <span>Другое</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Фирменные шрифты" id="check27">
+                            <label class="checkbox__label" for="check27"></label>
+                        <span>Фирменные шрифты</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Ручки/флешки/кружки/любая другая сувенирная продукция" id="check28">
+                            <label class="checkbox__label" for="check28"></label>
+                        <span>Ручки/флешки/кружки/любая другая сувенирная продукция</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <p>2) Какие элементы дизайна Вы бы хотели заказать?</p>
+
+                <fieldset class="fieldset fieldset--norow">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Логотип" id="check16">
+                            <label class="checkbox__label" for="check16"></label>
+                        <span>Логотип</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                        <input type="checkbox" value="Брендбук" id="check17">
+                        <label class="checkbox__label" for="check17"></label>
+                        <span>Брендбук</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                        <input type="checkbox" value="Сайт" id="check18">
+                        <label class="checkbox__label" for="check18"></label>
+                        <span>Сайт</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Фирменный стиль:" id="check19">
+                            <label class="checkbox__label" for="check19"></label>
+                        <span>Фирменный стиль:</span>
+                        </label>
+
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="checkbox" value="Визитки" id="check19-1">
+                                    <label class="checkbox__label" for="check19-1"></label>
+                                <span>Визитки</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" value="Бланки" id="check19-2">
+                                    <label class="checkbox__label" for="check19-2"></label>
+                                <span>Бланки</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" value="Конверты" id="check19-3">
+                                    <label class="checkbox__label" for="check19-3"></label>
+                                <span>Конверты</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" value="Папки" id="check19-4">
+                                    <label class="checkbox__label" for="check19-4"></label>
+                                <span>Папки</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" value="Пакеты" id="check19-5">
+                                    <label class="checkbox__label" for="check19-5"></label>
+                                <span>Пакеты</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" value="Ручки" id="check19-6">
+                                    <label class="checkbox__label" for="check19-6"></label>
+                                <span>Ручки</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" value="Флешки" id="check19-7">
+                                    <label class="checkbox__label" for="check19-7"></label>
+                                <span>Флешки</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" value="Кружки" id="check19-8">
+                                    <label class="checkbox__label" for="check19-8"></label>
+                                <span>Кружки</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" value="Другое" id="check19-9">
+                                    <label class="checkbox__label" for="check19-9"></label>
+                                <span>Другое</span>
+                                </label>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Имиджевый каталог" id="check20">
+                            <label class="checkbox__label" for="check20"></label>
+                        <span>Имиджевый каталог</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Другое" id="check21">
+                            <label class="checkbox__label" for="check21"></label>
+                        <span>Другое</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <p>3) Сколько вариантов логотипа вам необходимо?</p>
+                <fieldset class="fieldset fieldset--norow">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Sliver (1)" id="check29">
+                            <label class="checkbox__label" for="check29"></label>
+                        <span>Sliver (1)</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Gold (3)" id="check30">
+                            <label class="checkbox__label" for="check30"></label>
+                        <span>Gold (3)</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Platinum (5)" id="check31">
+                            <label class="checkbox__label" for="check31"></label>
+                        <span>Platinum (5)</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <p>4) Какое название вы хотите использовать в логотипе?</p>
+                <fieldset class="fieldset fieldset--big">
+
+                    <label class="label-text">
+                     
+                        <input class="input" type="text" name="" id="" placeholder=" ">
+                        <span>Текст</span>
+                    </label>
+                    <br>
+                    <div>
+                        <label>
+                                <input type="checkbox" value="У меня пока нет названия, но я готов заказать его разработку" id="check33">
+                                <label class="checkbox__label" for="check33"></label>
+                        <span>У меня пока нет названия, но я готов заказать его разработку</span>
+                        </label>
+                    </div>
+
+                </fieldset>
+                <p>5) Возможно, вам понадобится несколько разноязычных версий. Пожалуйста, укажите, какие версии названия вам нужны.</p>
+
+                <fieldset class="fieldset fieldset--norow">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Русская" id="check34">
+                            <label class="checkbox__label" for="check34"></label>
+                        <span>Русская</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Английская" id="check35">
+                            <label class="checkbox__label" for="check35"></label>
+                        <span>Английская</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Другое" id="check36">
+                            <label class="checkbox__label" for="check36"></label>
+                        <span>Другое</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <p>6) Будет ли в логотипе вместе с названием использоваться слоган или приписка?</p>
+                <fieldset class="fieldset fieldset--big">
+
+                    <label class="label-text">
+                     
+                        <input class="input" type="text" name="" id="" placeholder=" ">
+                        <span>Текст</span>
+                    </label>
+                    <br>
+                    <div>
+                        <label>
+                                <input type="checkbox" value="Нет" id="check37">
+                                <label class="checkbox__label" for="check37"></label>
+                        <span>Нет</span>
+                        </label>
+                    </div>
+                    <br>
+                    <div>
+                        <label>
+                                <input type="checkbox" value="У меня пока нет слогана, но я готов заказать его разработку" id="check38">
+                                <label class="checkbox__label" for="check38"></label>
+                        <span>У меня пока нет слогана, но я готов заказать его разработку</span>
+                        </label>
+                    </div>
+
+                </fieldset>
+                <h4 style="margin-top: 40px;margin-bottom: 40px;">4. Мы всегда выполняем свою работу на совесть и очень хотим, чтобы созданный нами дизайн Вам действительно понравился. Для того, чтобы мы поняли, что Вам нравится и нам было, от чего оттолкнуться, расскажите немного о своих предпочтениях
+                    в дизайне.</h4>
+
+                <p>1) Какие цвета вы бы хотели видеть в своем логотипе?</p>
+                <fieldset class="fieldset fieldset--twocolumn">
+                    <div>
+                        <label>
+                                <input type="checkbox" value="Красный: страсть, гнев, любовь, уверенность" id="check39">
+                                <label class="checkbox__label" for="check39"></label>
+                        <span> 
+                                <span class="color" style="background-color: #F90D0D;"></span> Красный: страсть, гнев, любовь, уверенность
+                        </span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="Оранжевый: молодость, радость, тепло, голод" id="check40">
+                            <label class="checkbox__label" for="check40"></label>
+                        <span> 
+                            <span class="color" style="background-color:  #FF8314;"></span> Оранжевый: молодость, радость, тепло, голод
+                        </span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="Желтый: солнечный свет, счастье, энергия, оптимизм" id="check41">
+                            <label class="checkbox__label" for="check41"></label>
+                        <span> 
+                            <span class="color" style="background-color: #F2C94C;"></span> Желтый: солнечный свет, счастье, энергия, оптимизм
+                        </span>
+                        </label>
+
+                        <label>
+                        <input type="checkbox" value="Зеленый: природа, плодородие, равновесие, чистота" id="check42">
+                        <label class="checkbox__label" for="check42"></label>
+                        <span> 
+                        <span class="color" style="background-color:  #8DC63F;"></span>Зеленый: природа, плодородие, равновесие, чистота
+                        </span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="Синий: вода, спокойствие, доверие, сила" id="check43">
+                            <label class="checkbox__label" for="check43"></label>
+                        <span> 
+                            <span class="color" style="background-color: #2F80ED;"></span> Синий: вода, спокойствие, доверие, сила
+                        </span>
+                        </label>
+
+                        <label>
+                        <input type="checkbox" value="Фиолетовый: благородство, сила, элегантность, мудрость" id="check44">
+                        <label class="checkbox__label" for="check44"></label>
+                        <span> 
+                        <span class="color" style="background-color:  #9C0FDF;"></span>Фиолетовый: благородство, сила, элегантность, мудрость
+                        </span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="Белый: мир, равновесие, чистота, простота, зима" id="check45">
+                            <label class="checkbox__label" for="check45"></label>
+                        <span> 
+                            <span class="color" style="background-color:  #FFFFFF; border: 1px solid #CFCFCF;
+                            "></span>Белый: мир, равновесие, чистота, простота, зима
+                        </span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Серый: нейтральный, изощренность, равновесие, мудрость" id="check46">
+                            <label class="checkbox__label" for="check46"></label>
+                        <span> 
+                            <span class="color" style="background-color: #828282;"></span> Серый: нейтральный, изощренность, равновесие, мудрость
+                        </span>
+                        </label>
+
+                        <label>
+                        <input type="checkbox" value="Черный: эксклюзивность, современность, сила, изощренность, тайна" id="check47">
+                        <label class="checkbox__label" for="check47"></label>
+                        <span> 
+                        <span class="color" style="background-color:  #000000;"></span> Черный: эксклюзивность, современность, сила, изощренность, тайна
+                        </span>
+                        </label>
+
+                        <label>
+                        <input type="checkbox" value="Коричневый: земля, стабильность, традиции, природа" id="check48">
+                        <label class="checkbox__label" for="check48"></label>
+                        <span> 
+                        <span class="color" style="background-color: #894A11;"></span> Коричневый: земля, стабильность, традиции, природа
+                        </span>
+                        </label>
+
+                        <label>
+                        <input type="checkbox" value="Розовый: любовь, романтика, женственность" id="check49">
+                        <label class="checkbox__label" for="check49"></label>
+                        <span> 
+                        <span class="color" style="background-color:  #FD1886;"></span>Розовый: любовь, романтика, женственность
+                        </span>
+                        </label>
+
+                        <label>
+                        <input type="checkbox" value="Голубой: спокойствие, ясность, сострадание, исцеление" id="check50">
+                        <label class="checkbox__label" for="check50"></label>
+                        <span> 
+                        <span class="color" style="background-color: #56CCF2;"></span> Голубой: спокойствие, ясность, сострадание, исцеление
+                        </span>
+                        </label>
+
+
+                        <label>
+                        <input type="checkbox" value="Другое" id="check52">
+                        <label class="checkbox__label" for="check52"></label>
+                        <span> 
+                        Другое
+                        </span>
+                        </label>
+                    </div>
+                </fieldset>
+                <p>2) Какие формы и линии должны быть в логотипе?</p>
+                <fieldset class="fieldset fieldset--twocolumn">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Плавные линии без прямых углов и линий/ Основная фигура – круг или овал" id="check53">
+                            <label class="checkbox__label" for="check53"></label>
+                        <span> 
+                                Плавные линии без прямых углов и линий/ Основная фигура – круг или овал
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Угловатые, резкие формы/ Основная фигура – треугольник" id="check54">
+                            <label class="checkbox__label" for="check54"></label>
+                        <span> 
+                                Угловатые, резкие формы/ Основная фигура – треугольник
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Прямые линии, квадраты, прямоугольники/ Основная фигура – прямоугольник" id="check55">
+                            <label class="checkbox__label" for="check55"></label>
+                        <span> 
+                                Прямые линии, квадраты, прямоугольники/ Основная фигура – прямоугольник
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Другое" id="check56">
+                            <label class="checkbox__label" for="check56"></label>
+                        <span> 
+                                Другое
+                            </span>
+                        </label>
+                    </div>
+                </fieldset>
+                <p>3) Какая степень детализации и проработки вам нравится?</p>
+                <fieldset class="fieldset fieldset--onecolumn">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Мне нравится минимализм, простота форм. Хочу очень простой логотип, лишенный каких-либо мелких деталей и прорисованных элементов." id="check56">
+                            <label class="checkbox__label" for="check56"></label>
+                        <span> 
+                            Мне нравится минимализм, простота форм. Хочу очень простой логотип, лишенный каких-либо мелких деталей и прорисованных элементов.
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Во всем нужен баланс. Мне нравятся понятные фигуры с несколькими отличительными элементами. Хочу такой логотип, на котором будет ровно столько деталей, сколько нужно." id="check57">
+                            <label class="checkbox__label" for="check57"></label>
+                        <span> 
+                            Во всем нужен баланс. Мне нравятся понятные фигуры с несколькими отличительными элементами. Хочу такой логотип, на котором будет ровно столько деталей, сколько нужно.
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Я хочу сложный, детализированный объект. Мне нравится разнообразие форм и элементов, большое количество мелких деталей." id="check58">
+                            <label class="checkbox__label" for="check58"></label>
+                        <span> 
+                            Я хочу сложный, детализированный объект. Мне нравится разнообразие форм и элементов, большое количество мелких деталей.
+                            </span>
+                        </label>
+
+                    </div>
+                </fieldset>
+
+                <p>4) Какова основная концепция логотипа?</p>
+                <fieldset class="fieldset fieldset--onecolumn">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Только название (шрифтовая композиция, возможно, с добавлением небольшого графического элемента, встроенного в саму надпись)." id="check59">
+                            <label class="checkbox__label" for="check59"></label>
+                        <span> 
+                            Только название (шрифтовая композиция, возможно, с добавлением небольшого графического элемента, встроенного в саму надпись).
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Только графический знак (только фирменная иконка, лого, значок, без текста)." id="check60">
+                            <label class="checkbox__label" for="check60"></label>
+                        <span> 
+                            Только графический знак (только фирменная иконка, лого, значок, без текста).
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Герб (эмблема, композиция из текста и изображения, встроенная в круг или щит)." id="check61">
+                            <label class="checkbox__label" for="check61"></label>
+                        <span> 
+                            Герб (эмблема, композиция из текста и изображения, встроенная в круг или щит).
+                            </span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="Аббревиатура (заглавные буквы из Вашего названия, выполненные в виде графического элемента)." id="check62">
+                            <label class="checkbox__label" for="check62"></label>
+                        <span> 
+                            Аббревиатура (заглавные буквы из Вашего названия, выполненные в виде графического элемента).
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Фирменный знак + простой текст (универсальный вариант, который состоит из фирменной иконки, дополненной простой текстовой надписью, размещенной снизу или справа)." id="check63">
+                            <label class="checkbox__label" for="check63"></label>
+                        <span> 
+                            Фирменный знак + простой текст (универсальный вариант, который состоит из фирменной иконки, дополненной простой текстовой надписью, размещенной снизу или справа).
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Сложная композиция из изобразительных и шрифтовых элементов." id="check64">
+                            <label class="checkbox__label" for="check64"></label>
+                        <span> 
+                            Сложная композиция из изобразительных и шрифтовых элементов.
+                            </span>
+                        </label>
+
+                    </div>
+                </fieldset>
+
+
+                <p>5) Где планируется использовать логотип в первую очередь?</p>
+                <fieldset class="fieldset fieldset--onecolumn">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="Веб (сайт, баннерная реклама, интернет-рассылка)" id="check65">
+                            <label class="checkbox__label" for="check65"></label>
+                        <span> 
+                            Веб (сайт, баннерная реклама, интернет-рассылка)
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Печать (визитки, конверты, бланки)." id="check66">
+                            <label class="checkbox__label" for="check66"></label>
+                        <span> 
+                            Печать (визитки, конверты, бланки).
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Одежда (футболки, кепки, вышивка на ткани)." id="check67">
+                            <label class="checkbox__label" for="check67"></label>
+                        <span> 
+                            Одежда (футболки, кепки, вышивка на ткани).
+                            </span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" value="Сувениры и промо-материалы (ручки, флешки, кружки)." id="check68">
+                            <label class="checkbox__label" for="check68"></label>
+                        <span> 
+                            Сувениры и промо-материалы (ручки, флешки, кружки).
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Фирменный знак + простой текст (универсальный вариант, который состоит из фирменной иконки, дополненной простой текстовой надписью, размещенной снизу или справа)." id="check69">
+                            <label class="checkbox__label" for="check69"></label>
+                        <span> 
+                            Фирменный знак + простой текст (универсальный вариант, который состоит из фирменной иконки, дополненной простой текстовой надписью, размещенной снизу или справа).
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Сложная композиция из изобразительных и шрифтовых элементов." id="check70">
+                            <label class="checkbox__label" for="check70"></label>
+                        <span> 
+                            Сложная композиция из изобразительных и шрифтовых элементов.
+                            </span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Большие поверхности (вывески, наружная реклама, брендирование транспорта)." id="check71">
+                            <label class="checkbox__label" for="check71"></label>
+                        <span> 
+                            Большие поверхности (вывески, наружная реклама, брендирование транспорта).
+                            </span>
+                        </label>
+                    </div>
+                </fieldset>
+                <p>6) Пожалуйста, выберите до трех логотипов, которые вам нравятся (нажимайте на выбранные логотипы):</p>
+                <fieldset class=" fieldset--logo">
+                    <label>
+                        <input type="checkbox" value="1" id="check71">
+                       
+                        <img src="./img/form/1.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="2" id="check71">
+                       
+                        <img src="./img/form/2.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="3" id="check71">
+                       
+                        <img src="./img/form/3.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="4" id="check71">
+                       
+                        <img src="./img/form/4.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="5" id="check71">
+                       
+                        <img src="./img/form/5.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="6" id="check71">
+                       
+                        <img src="./img/form/6.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="7" id="check71">
+                       
+                        <img src="./img/form/7.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="8" id="check71">
+                       
+                        <img src="./img/form/8.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="9" id="check71">
+                       
+                        <img src="./img/form/9.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="10" id="check71">
+                       
+                        <img src="./img/form/10.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="11" id="check71">
+                       
+                        <img src="./img/form/11.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="12" id="check71">
+                       
+                        <img src="./img/form/12.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="13" id="check71">
+                       
+                        <img src="./img/form/13.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="14" id="check71">
+                       
+                        <img src="./img/form/14.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="15" id="check71">
+                       
+                        <img src="./img/form/15.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" value="16" id="check71">
+                       
+                        <img src="./img/form/16.png" alt="">
+                    </label>
+                </fieldset>
+
+                <div class="brif__text">
+                    <p>На этом все. Благодарим вас за уделенное время! Мы внимательно изучим ваши ответы и свяжемся с вами в ближайшее время.</p>
+                    <button type="submit" class="button button--filled "><span>Отправить бриф</span></button>
+                </div>
+
+
+            </form>
+
+
+
+
+        </section>
+
+
+    </div>
+</main>
+<!-- Футер -->
+<include src="components/footer.html"></include>

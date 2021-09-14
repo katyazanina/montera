@@ -1,0 +1,81 @@
+.page-404 {
+    position: relative;
+    background-color: $color-dark;
+    overflow: hidden;
+    min-height: 100vh;
+    height: 100vh;
+    &>.container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: 100%;
+    }
+    &__text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 85px 150px 102px;
+        @include laptop {
+            padding: 45px 60px 62px;
+        }
+        @include mobile {
+            padding: 45px 30px 62px;
+        }
+        @include tablets {
+            width: 100%;
+            align-items: center;
+        }
+    }
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        @include tablets {
+            display: none;
+        }
+    }
+    & h1 {
+        margin-top: 25px;
+        color: $color-lg-green;
+        font-weight: 300;
+        padding-left: 85px;
+    }
+    & h3 {
+        margin-bottom: 15px;
+        font-weight: 400 !important;
+        color: $color-white;
+        font-size: 30px;
+        line-height: 36px;
+        @include tablets {
+            text-align: center;
+        }
+    }
+    & p {
+        color: $color-white;
+        margin-bottom: 30px;
+        @include tablets {
+            text-align: center;
+        }
+    }
+    & a {
+        max-width: 300px;
+        justify-content: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        @include tablets {
+            max-width: none;
+            width: 100%;
+        }
+    }
+    & svg {
+        @include mobile {
+            max-width: 300px;
+        }
+    }
+}

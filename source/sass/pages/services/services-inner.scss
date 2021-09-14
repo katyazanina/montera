@@ -1,0 +1,279 @@
+.banner-inner {
+    padding-bottom: 70px;
+    position: relative;
+    background-size: cover;
+    background-position: 66%;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    box-sizing: border-box;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(47, 47, 47, 0.6);
+        left: 0;
+        top: 0;
+    }
+    .title-inner {
+        color: $color-white;
+        text-transform: none;
+        width: 55%;
+        margin-bottom: 30px;
+        @include tablets {
+            width: 100%;
+        }
+        & .cover {
+            background-color: $color-white;
+        }
+    }
+    & .breadcrumbs li {
+        color: $color-white;
+    }
+    .breadcrumbs li:not(:last-child)::before {
+        background-image: $arrow-white;
+    }
+    &__desc {
+        position: relative;
+        z-index: 2;
+        color: $color-white;
+        width: 50%;
+        @include tablets {
+            width: 100%;
+        }
+    }
+}
+
+.about-inner {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5%;
+    @include tablets {
+        grid-template-columns: 1fr;
+    }
+    &__column:last-child {
+        & img {
+            height: 100%;
+            object-fit: cover;
+        }
+        @include tablets {
+            display: none;
+        }
+    }
+    & .figure-wrap figure {
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+}
+
+.service-type {
+    @include list-destroy;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-gap: 5%;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        & h3 {
+            color: $color-lg-green;
+            margin-bottom: 20px;
+        }
+        & p {
+            margin-bottom: 50px;
+        }
+    }
+    & img {
+        align-self: flex-start;
+        margin-top: auto;
+    }
+}
+
+.swiper-container--serv-type {
+    width: 100%;
+    display: flex;
+    & .swiper-pagination {
+        display: none;
+        @include tablets {
+            display: block;
+        }
+    }
+}
+
+.present {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px 60px;
+    margin-top: 25px;
+    background-image: url(../img/bg-present.svg);
+    background-size: cover;
+    background-color: $color-black;
+    @include laptop {
+        padding: 20px 30px;
+        margin-bottom: 0px;
+    }
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    & h4 {
+        margin-bottom: 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        /* or 125% */
+        text-align: center;
+        color: $color-white;
+        padding-left: 70px;
+        padding-right: 70px;
+        @include laptop {
+            font-size: 18px;
+            line-height: 25px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @include mobile {
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    & img {
+        width: 78px;
+        height: 78px;
+        @include laptop {
+            width: 45px;
+            height: 45px;
+        }
+    }
+    & .button {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
+.portfolio-slider {
+    display: flex;
+    justify-content: space-between;
+    @include laptop {
+        flex-direction: column;
+    }
+    &__thumbs {
+        flex-grow: 1;
+        margin: 0;
+        margin-right: 3%;
+        max-height: 755px;
+        @include laptop {
+            border-bottom: 1px solid #C4C4C4;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+        & .swiper-slide::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 7px;
+            background-image: $arrow-grey;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: $transition-speed;
+            @include laptop {
+                display: none;
+            }
+        }
+        & .swiper-slide {
+            @include p-style;
+            cursor: pointer;
+            width: auto !important;
+            height: auto !important;
+            transition: $transition-speed;
+            border-bottom: 1px solid #C4C4C4;
+            box-sizing: border-box;
+            padding: 10px 20px 10px 20px;
+            @include laptop {
+                border-bottom: none;
+                padding: 10px 60px 10px 0px;
+            }
+            &:hover {
+                color: $color-green;
+            }
+            &:hover {
+                &::before {
+                    right: 10px;
+                }
+            }
+        }
+        & .swiper-slide-thumb-active {
+            color: $color-green;
+            transition: $transition-speed;
+            &::before {
+                right: 10px;
+                background-image: $arrow-dark;
+            }
+            @include laptop {
+                text-shadow: 0px 0px 1px currentColor;
+            }
+        }
+    }
+    &__content {
+        width: 1074px;
+        height: 902px;
+        flex-shrink: 0;
+        @include tablets {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+        }
+        & .swiper-slide {
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            box-sizing: border-box;
+            @include tablets {
+                background-size: auto 500px;
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+            @media(max-width:501px) {
+                background-size: auto 300px;
+            }
+        }
+        & .text {
+            width: 465px;
+            margin-top: 150px;
+            margin-right: 50px;
+            @include tablets {
+                padding: 20px;
+                color: $color-white;
+                color: $color-dark;
+                box-sizing: border-box;
+                width: auto;
+                // width: 500px;
+                // margin: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0;
+                margin-bottom: 500px;
+            }
+            @media(max-width:501px) {
+                margin-bottom: 300px;
+            }
+        }
+    }
+}

@@ -1,0 +1,241 @@
+.brif {
+    &__text {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        & .button {
+            margin: 0 auto;
+            margin-top: 35px;
+            padding: 8px 20px;
+        }
+    }
+    .fieldset {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 60px;
+        padding: 25px 0px 35px;
+        @include tablets {
+            grid-template-columns: 1fr;
+        }
+        & div>label {
+            display: flex;
+            margin-bottom: 15px;
+            & img {
+                border: 1px solid #C9C9C9;
+            }
+        }
+        & p {
+            margin-bottom: 15px;
+            color: #000;
+        }
+    }
+    .fieldset--checkbox {
+        grid-template-columns: repeat( 5, minmax(20%, min-content));
+        grid-template-rows: auto;
+        @include laptop {
+            grid-template-columns: repeat( 3, minmax(33%, min-content));
+        }
+        @include tablets {
+            grid-template-columns: repeat( 1, 1fr);
+        }
+    }
+    .fieldset--big {
+        grid-template-columns: 2fr 1fr;
+        & div>label {
+            margin-bottom: 0;
+        }
+        @include tablets {
+            grid-template-columns: 1fr;
+        }
+    }
+    .fieldset--twocolumn {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        @include tablets {
+            grid-template-columns: 1fr;
+        }
+    }
+    .fieldset--onecolumn {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .fieldset--big-text {
+        grid-template-rows: 120px;
+        grid-gap: 0;
+    }
+    .fieldset--norow {
+        grid-template-rows: auto;
+        grid-gap: 0;
+    }
+    .fieldset--logo {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 25px 0px 35px;
+        margin-left: -10px;
+        &>label {
+            & img {
+                border: 1px solid #C9C9C9;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                width: 166px;
+                height: 166px;
+            }
+        }
+        &>label {
+            input:checked~img {
+                border: 1px solid $color-lg-green;
+            }
+        }
+    }
+    .label {
+        height: 60px;
+    }
+    .label-text {
+        height: 100%;
+        & span {
+            background: #f5f5f5;
+        }
+    }
+    input {
+        background: #F5F5F5;
+        border: 1px solid #C9C9C9;
+        &:focus {
+            border: 1px solid $color-lg-green;
+        }
+    }
+    textarea {
+        background: #F5F5F5;
+        border: 1px solid #C9C9C9;
+        height: 100%;
+        &:focus {
+            border: 1px solid $color-lg-green;
+        }
+    }
+    .checkbox__label {
+        background: #F5F5F5;
+        border: 1px solid #C9C9C9;
+        &~span {
+            color: #929292;
+        }
+    }
+    & ul {
+        @include list-destroy;
+        padding-left: 30px;
+        & li {
+            & label {
+                display: flex;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    & p {
+        color: #000;
+    }
+}
+
+
+/* Кастомный селект */
+
+.custom-select {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element: */
+}
+
+.select-selected {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Style the arrow inside the select element: */
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    width: 16px;
+    height: 16px;
+    background-image: $select-arrow;
+    // border: 6px solid transparent;
+    // border-color: #000 transparent transparent transparent;
+    transition: all 0.35s ease-in-out;
+}
+
+
+/* Point the arrow upwards when the select box is open (active): */
+
+.select-selected.select-arrow-active:after {
+    transform: rotate(180deg);
+}
+
+
+/* style the items (options), including the selected item: */
+
+.select-items div,
+.select-selected {
+    color: #929292;
+    background-color: #F5F5F5;
+    border: 1px solid #C9C9C9;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    transition: all 0.35s ease-in-out;
+}
+
+.select-items div {
+    height: 60px;
+    border-top: none;
+}
+
+
+/* Style items (options): */
+
+.select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: #fff;
+    opacity: 1;
+    pointer-events: auto;
+    /* transform: translateY(0%); */
+    transition: all 0.35s ease-in-out;
+}
+
+
+/* Hide the items when the select box is closed: */
+
+.select-hide {
+    opacity: 0;
+    pointer-events: none;
+    /* transform: translateY(-100%); */
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}

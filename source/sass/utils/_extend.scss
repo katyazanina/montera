@@ -1,0 +1,177 @@
+.button {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 36px;
+    /* or 257% */
+    letter-spacing: 1px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    /* светло-зелёный */
+    color: $color-lg-green;
+    border-spacing: 0;
+    border: 1px solid $color-lg-green;
+    padding: 1px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    & span {
+        position: relative;
+        z-index: 1;
+    }
+    &::after {
+        content: "";
+        position: relative;
+        background-image: $arrow;
+        width: 30px;
+        height: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 15px;
+        transition: $transition-speed;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        transform: translateX(-100%);
+        height: 46px;
+        background-color: $color-lg-green;
+        transition: $transition-speed;
+        z-index: -1;
+    }
+    &:hover {
+        border: 1px solid rgba(141, 198, 63, 0);
+        color: $color-white;
+        &::after {
+            background-image: $arrow-white;
+        }
+        &::before {
+            transform: translateX(0%);
+        }
+    }
+}
+
+.button--filled {
+    color: $color-white;
+    border: 1px solid rgba(115, 141, 78, 0);
+    &::after {
+        content: "";
+        position: relative;
+        background-image: $arrow-white;
+        width: 30px;
+        height: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 15px;
+        transition: $transition-speed;
+        z-index: 1;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        transform: translateX(0%);
+        height: 100%;
+        background-color: $color-lg-green;
+        transition: $transition-speed;
+        z-index: 1;
+    }
+    &:hover {
+        border: 1px solid $color-lg-green;
+        color: $color-lg-green;
+        &::after {
+            background-image: $arrow;
+        }
+        &::before {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+.label {
+    position: relative;
+    & span {
+        position: absolute;
+        display: block;
+        font-style: normal;
+        font-weight: 300;
+        color: #929292;
+        width: calc(100% - 45px);
+        padding-top: 2px;
+        padding-bottom: 2px;
+        // padding-bottom: 5px;
+        transition: all 0.5s ease;
+        will-change: font-size;
+        top: 1px;
+        text-align: left;
+        left: 25px;
+        font-size: 13px;
+        line-height: 15px
+    }
+    & input {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    & input:placeholder-shown~span {
+        position: absolute;
+        display: block;
+        top: 15px;
+        left: 25px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 25px;
+        /* identical to box height, or 125% */
+        color: #929292;
+        transition: all 0.5s ease;
+        will-change: font-size;
+    }
+    & input:focus~span {
+        top: 1px;
+        font-size: 13px;
+        line-height: 15px;
+        left: 25px;
+    }
+}
+
+.label-text {
+    @extend .label;
+    & textarea {
+        width: 100%;
+        height: 100%;
+    }
+    & textarea:placeholder-shown~span {
+        position: absolute;
+        display: block;
+        top: 15px;
+        left: 25px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 25px;
+        /* identical to box height, or 125% */
+        color: #929292;
+        transition: all 0.5s ease;
+        will-change: font-size;
+    }
+    & textarea:focus~span {
+        top: 1px;
+        font-size: 13px;
+        line-height: 15px;
+        left: 25px;
+    }
+}

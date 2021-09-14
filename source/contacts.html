@@ -1,0 +1,83 @@
+<!-- Шапка и меню -->
+<include src="components/header.html" locals='{
+    "class": "header--inner"}'></include>
+
+<main>
+
+    <div class=" wrapper inner">
+
+
+        <include src="components/breadcrumbs.html"></include>
+
+        <include src="components/h1-block.html" locals='{
+            "title": "Контакты"}'></include>
+
+
+        <section class="contacts  block--white block--padding container">
+
+
+            <div class="contacts__column">
+                <ul class="contacts__list">
+                    <li>
+                        <p>
+                            <img src="./img/icon/clock.svg" alt="">
+                            <span>Понедельник - пятница, c 9:00 до 18:00</span>
+
+                        </p>
+                    </li>
+                    <li>
+                        <a href="tel:+7 (812) 920-06-77">
+                            <img src="./img/icon/phone-call.svg" alt="">
+                            <span>+7 (812) 920-06-77</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info@monte-ra.ru">
+                            <img src="./img/icon/email.svg" alt="">
+                            <span>info@monte-ra.ru</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="./img/icon/pin.svg" alt="">
+                            <span>Россия, Санкт-Петербург, Лифляндская улица, д. 6, к. 6</span>
+
+                        </p>
+                    </li>
+                </ul>
+
+                <div class="contacts__text text">
+                    <h3>Доставка заказов</h3>
+                    <p>Наши курьеры оперативно доставят ваш заказ по любому адресу в Санкт-Петербурге.</p>
+                    <p><b>Стоимость доставки курьером</b> — 350 р.</p>
+                    <p><b>Водителем</b> — 700 р.</p>
+                    <p>Для Заказчиков из других городов мы осуществляем доставку тиражей профессиональными транспортными компаниями. Перевозка осуществляется согласно тарифам. Сроки устанавливаются индивидуально.</p>
+                </div>
+            </div>
+
+            <div class="contacts__column">
+                <div class="yandexmap">
+
+                    <div id="lat" style="display: none;">
+                        59.905795
+                    </div>
+                    <div id="lon" style="display: none;">
+                        30.264377
+
+                    </div>
+                    <div id="adress" style="display: none;">
+                        Россия, Санкт-Петербург, Лифляндская улица, д. 6, к. 6
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+</main>
+<!-- Футер -->
+<include src="components/footer.html"></include>

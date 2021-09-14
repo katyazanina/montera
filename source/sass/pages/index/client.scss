@@ -1,0 +1,24 @@
+.client {
+    @include list-destroy;
+    &__wrap {
+        position: relative;
+        @include laptop {
+            padding-left: 30px;
+            padding-right: 30px;
+            box-sizing: border-box;
+        }
+    }
+    & li {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.swiper-container--client {
+    @include mobile {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}

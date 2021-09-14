@@ -1,0 +1,136 @@
+.footer {
+    padding: 22px 0px;
+    width: 100%;
+    bottom: 0;
+    background: $color-dark;
+    color: $color-white;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 22px;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    &__logo {
+        & img {
+            max-width: 155px;
+            @include tablets {
+                max-width: 122px;
+            }
+            @include mobile {
+                max-width: 75px;
+            }
+        }
+    }
+    &__column {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: 300 !important;
+        font-weight: normal;
+        text-transform: none;
+        @include mobile {
+            margin-left: auto;
+            align-items: flex-end;
+            font-size: 14px;
+        }
+    }
+    &__nav {
+        height: 100%;
+        @include tablets {
+            display: none;
+        }
+    }
+    &__nav-list {
+        @include list-destroy;
+        @include p-style;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        &>li {
+            height: 100%;
+            font-size: 16px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            &>a {
+                height: 100%;
+                padding: 0px 20px;
+                display: flex;
+                font-style: normal;
+                font-weight: bold;
+                text-transform: uppercase;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &>li:first-child {
+            padding-left: 0;
+        }
+        &>li:last-child {
+            padding-left: 0;
+        }
+    }
+    &__social {
+        @include list-destroy;
+        display: flex;
+        align-items: center;
+        &-item {
+            margin-left: 15px;
+            @include mobile {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+            & svg path {
+                transition: $transition-speed;
+            }
+            &:hover svg path {
+                fill: $color-white;
+            }
+        }
+        @include mobile {
+            width: 100%;
+        }
+    }
+    &__medium {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: center;
+        color: $color-grey;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 17px;
+        @include mobile {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            float: right;
+            margin-top: -40px;
+        }
+    }
+}
+
+.footer__parallax-wrap {
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    // background-color: #fff;
+}
+
+.wrapper {
+    pointer-events: auto;
+}

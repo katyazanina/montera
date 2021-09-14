@@ -1,0 +1,79 @@
+.form {
+    text-align: center;
+    & h2 {
+        margin-bottom: 15px;
+    }
+    & p {
+        width: 40%;
+        text-align: center;
+        margin: 0 auto;
+        @include tablets {
+            width: 100%;
+        }
+    }
+    &__wrap {
+        margin-top: 45px;
+        display: grid;
+        grid-template-rows: 60px 60px 60px auto;
+        grid-template-columns: 42% 58%;
+        grid-auto-flow: column;
+        grid-gap: 20px;
+        @include tablets {
+            grid-auto-flow: row;
+            grid-template-columns: 100%;
+            grid-template-rows: 60px 60px 60px 120px auto;
+        }
+    }
+    & .label-text {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        @include tablets {
+            grid-row-start: 4;
+            grid-row-end: 6;
+        }
+        & span {
+            background: #3b403f;
+        }
+    }
+    & .licences {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        font-size: 14px;
+        line-height: 18px;
+        &>span {
+            margin-right: 10px;
+            @include tablets {
+                width: 80%;
+            }
+        }
+        & .button {
+            flex-shrink: 0;
+            @include tablets {
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            @include mobile {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        @include tablets {
+            flex-wrap: wrap;
+        }
+    }
+    & .input-label {
+        text-align: left;
+        color: $color-lg-green;
+        display: flex;
+        align-items: flex-start;
+        cursor: pointer;
+        & svg {
+            margin-right: 10px;
+        }
+    }
+}
+
+#fl_inp {
+    display: none;
+}
