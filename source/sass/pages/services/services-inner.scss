@@ -160,6 +160,16 @@
         padding-bottom: 8px;
         padding-left: 35px;
         padding-right: 35px;
+        color: $color-dark;
+        &::after {
+            background-image: $arrow-grey;
+        }
+        &:hover {
+            color: $color-lg-green;
+            &::after {
+                background-image: $arrow;
+            }
+        }
     }
 }
 

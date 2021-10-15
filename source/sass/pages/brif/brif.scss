@@ -1,4 +1,9 @@
 .brif {
+    @include tablets {
+        br {
+            display: none;
+        }
+    }
     &__text {
         width: 60%;
         margin: 0 auto;
@@ -6,7 +11,7 @@
         & .button {
             margin: 0 auto;
             margin-top: 35px;
-            padding: 8px 20px;
+            padding: 8px 30px;
         }
     }
     .fieldset {
@@ -20,7 +25,8 @@
         }
         & div>label {
             display: flex;
-            margin-bottom: 15px;
+            align-items: center;
+            margin-bottom: 12px;
             & img {
                 border: 1px solid #C9C9C9;
             }
@@ -31,14 +37,24 @@
         }
     }
     .fieldset--checkbox {
-        grid-template-columns: repeat( 5, minmax(20%, min-content));
-        grid-template-rows: auto;
-        @include laptop {
-            grid-template-columns: repeat( 3, minmax(33%, min-content));
-        }
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
         @include tablets {
-            grid-template-columns: repeat( 1, 1fr);
+            flex-direction: column;
         }
+        // grid-template-columns: repeat( 5, minmax(20%, min-content));
+        // grid-template-rows: auto;
+        // @include laptop {
+        //     grid-template-columns: repeat( 3, minmax(33%, min-content));
+        // }
+        // @include tablets {
+        //     grid-template-columns: repeat( 1, 1fr);
+        // }
+        // &>div {
+        //     max-width: 345px;
+        // }
+        // @include
     }
     .fieldset--big {
         grid-template-columns: 2fr 1fr;
@@ -102,6 +118,8 @@
         border: 1px solid #C9C9C9;
         &:focus {
             border: 1px solid $color-lg-green;
+            background: #fff;
+            color: #333;
         }
     }
     textarea {
@@ -117,7 +135,12 @@
         border: 1px solid #C9C9C9;
         &~span {
             color: #929292;
+            font-size: 16px;
+            line-height: 18px;
         }
+    }
+    input[type=checkbox]:checked~.checkbox__label {
+        background: #fff
     }
     & ul {
         @include list-destroy;
@@ -126,6 +149,10 @@
             & label {
                 display: flex;
                 margin-bottom: 10px;
+            }
+            & span {
+                font-size: 14px;
+                line-height: 18px;
             }
         }
     }

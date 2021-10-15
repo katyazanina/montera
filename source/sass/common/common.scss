@@ -17,14 +17,14 @@
     }
     
     .inner {
-        padding-top: 134px;
+        padding-top: 145px;
         background-color: $color-white;
         // pointer-events: auto;
         @include tablets {
             padding-top: 90px;
         }
         @include mobile {
-            padding-top: 60px;
+            padding-top: 80px;
         }
     }
     
@@ -535,16 +535,20 @@
             margin-bottom: 20px;
         }
         ul {
-            padding-left: 20px;
+            padding-left: 30px;
         }
         ul:not(:last-child) {
             margin-bottom: 20px;
         }
         ol {
-            padding-left: 20px;
+            padding-left: 30px;
         }
         ol:not(:last-child) {
             margin-bottom: 20px;
+        }
+        a {
+            color: $color-lg-green;
+            text-decoration: underline;
         }
     }
     
@@ -719,12 +723,20 @@
         }
         & p {
             width: 100%;
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
             box-sizing: border-box;
             min-width: 1280px;
             vertical-align: middle;
         }
         & .button {
+            margin-left: auto;
             padding: 8px 30px;
+            color: $color-black;
+            &::after {
+                background-image: $arrow-grey;
+            }
         }
     }
     

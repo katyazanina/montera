@@ -24,9 +24,9 @@
         margin-bottom: 2%;
         display: flex;
         flex-direction: column;
-        // @include laptop {
-        //     padding: 70px;
-        // }
+        @include laptop {
+            padding: 20px 30px 20px 40px;
+        }
         @include tablets {
             width: 48%;
             padding: 40px;
@@ -46,6 +46,8 @@
                 background-image: url(../img/icon/star.svg);
                 width: 54px;
                 height: 52px;
+                flex-shrink: 0;
+                background-size: 54px 52px;
             }
         }
         &--gold {
@@ -56,6 +58,8 @@
                 background-image: url(../img/icon/star-2.svg);
                 width: 54px;
                 height: 52px;
+                flex-shrink: 0;
+                background-size: 54px 52px;
             }
         }
         &--platinum {
@@ -66,6 +70,8 @@
                 background-image: url(../img/icon/star-3.svg);
                 width: 54px;
                 height: 52px;
+                flex-shrink: 0;
+                background-size: 54px 52px;
             }
         }
         & svg {
@@ -100,9 +106,14 @@
         z-index: 2;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         position: relative;
         margin-bottom: 127px;
+        height: 48px;
+        @include laptop {
+            font-size: 36px;
+            line-height: 40px;
+        }
     }
     & p {
         position: relative;

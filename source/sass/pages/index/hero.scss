@@ -4,39 +4,62 @@ html {
 
 .hero__video {
     width: 100%;
-    // top: 0;
-    // left: 0;
     height: 100%;
-    // z-index: 1;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    // position: relative;
+    z-index: 8;
+    opacity: 1;
     // opacity: 0;
     // display: block;
     object-fit: cover;
-    // position: absolute;/ transition: all 0.5s ease;
+    position: absolute;
+    // transition: all 0.5s ease;
+}
+
+.hero__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 17, 17, 1);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: background-color 1s linear;
+}
+
+.visible.hero__overlay {
+    background-color: rgba(25, 17, 17, 0.8);
 }
 
 .hero__video-wrap {
     display: block;
-    object-fit: cover;
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     height: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: all 1s ease;
+    // z-index: 10;
+    // opacity: 0;
+    transition: opacity 1s linear;
 }
 
-.hero__video-wrap::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(25, 17, 17, 0.9);
-    top: 0;
-    left: 0;
-}
-
+// .hero__video-wrap::before {
+//     content: "";
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(25, 17, 17, 0.9);
+//     top: 0;
+//     left: 0;
+//     z-index: 10;
+//     // opacity: 0;
+//     // transition: all 1s linear;
+// }
+// .visible.hero__video-wrap::before {
+//     opacity: 1;
+// }
 .hero {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
@@ -46,7 +69,7 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     max-height: 100vh;
-    background-color: $color-black;
+    background-color: rgba(25, 17, 17, 1);
     @include mobile {
         background-position: left;
     }
@@ -60,7 +83,7 @@ html {
     }
     & h1 {
         font-style: normal;
-        font-weight: bold;
+        font-weight: 500;
         font-size: 110px;
         line-height: 110px;
         color: $color-white;

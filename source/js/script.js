@@ -141,20 +141,29 @@ function parallaxFooter() {
         document.querySelector('main').style.paddingBottom = document.querySelector('.footer__parallax-wrap').offsetHeight + 'px';
 
 
+        document.querySelectorAll('.footer__parallax-wrap .button').forEach((element, index) => {
 
+            element.addEventListener('click', function() {
+                window.scroll({
+                    behavior: 'smooth',
+
+                    top: document.getElementById('form').offsetTop
+                });
+            })
+
+        });
     } else {
 
         document.querySelector('.footer__parallax-wrap').style.position = 'static';
 
         document.querySelector('main').style.paddingBottom = '0px';
 
-
     }
 
 }
 
 const videoHero = document.querySelector('.hero__video');
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
     parallaxFooter()
 
 
@@ -164,10 +173,12 @@ window.addEventListener('load', function() {
         videoHero.load();
 
         videoHero.play();
+
         if (videoHero.played) {
             setTimeout(function() {
-                document.querySelector('.hero__video-wrap').style.opacity = "1";
-            }, 10)
+                document.querySelector('.hero__overlay').classList.add('visible');
+
+            }, 100)
 
         }
 
@@ -231,8 +242,6 @@ parallaxFooter()
 // });
 
 document.querySelectorAll('.button[href="#form"]').forEach(element => {
-
-
     element.addEventListener('click', function() {
         if (element.dataset.comment) {
             console.log(element.dataset.comment);
@@ -242,10 +251,6 @@ document.querySelectorAll('.button[href="#form"]').forEach(element => {
             document.querySelector('.input-text').value = "";
         }
     })
-
-
-
-
 });
 
 
@@ -253,8 +258,9 @@ document.querySelectorAll('form').forEach((element, index) => {
     if (!element.classList.contains('form-search')) {
 
 
-
         element.querySelector('.button').addEventListener('click', function() {
+
+
             let tel = element.querySelector('input[type="tel"]');
             let email = element.querySelector('input[type="email"]');
             if (tel.checkValidity()) {
